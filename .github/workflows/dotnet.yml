@@ -23,6 +23,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+    - name: filesystem
+      run: ls -la
     
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
